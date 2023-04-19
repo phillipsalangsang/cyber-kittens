@@ -1,8 +1,8 @@
+require("dotenv").config();
 const request = require('supertest');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-process.env.JWT_SECRET = 'neverTell';
 const SALT_COUNT = 10;
 const {JWT_SECRET} = process.env;
 
