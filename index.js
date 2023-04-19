@@ -76,6 +76,12 @@ app.get("/kittens/:id", async (req, res, next) => {
         res.sendStatus(403);
         return;
       }
+
+      res.send({
+        name: kitten.name,
+        age: kitten.age,
+        color: kitten.color,
+      });
   } catch (err) {
     next(err);
   }
